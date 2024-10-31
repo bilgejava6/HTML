@@ -1,0 +1,25 @@
+ /**
+        body içerisindeki tüm etiketleri etkiler
+        [TAG NAME]{
+        }
+        tag içindeki class props u için isimlendirme olarak çalışır
+        ve bu class name e sahip olan tüm tag leri etkiler.
+        .[NAME]{
+        }
+        */
+        h2{
+            color: cadetblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+        }
+    
+        .mainP{
+            color: coral;
+        }
+        .contentP{
+            color: rgb(199, 156, 99);
+        }
+
+        .btn{
+            
+        }

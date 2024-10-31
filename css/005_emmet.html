@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!---
+    > bir bileşenin alt kırılımlarına bileşen eklemek için kullanılır.
+    ^ bileşenin bir üst bileşenine ulaşmak için kullnırız.
+    + aynı düzeyde bileşenleri eklemek için kullanırız.
+    {} bileşenin içerisinde yer alacak metinleri eklemek için kullanılır.
+    * bir bileşenden birden fazla eklemek için kullanılır.
+    $ çoklu bileşen eklerken sıralamanın metin içerisine eklenmesini sağlar.
+    . bir bileşene class eklemek için kullanılır.
+    # bir bileşene id eklemek içni kullanılır.
+   () bir bileşen ile diğer bileşenin grup şeklinde kullanımın sırasında
+      karışmaması için kullanılır.
+    detaylı ornek:  table>thead>tr>th{baslik$}*2^^tbody>(tr>td{data$}*2)*50
+    -->
+
+<!--
+        kullanım:  div>div>label^div>input:text
+        sonuç: 
+        <div>
+            <div>
+                <label for="">User Name</label>
+            </div>
+            <div>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+    -->
+<!--
+    kullanım:  div>label+input:text+button:button
+    çıktı:
+     <div>
+        <label for=""></label>
+        <input type="text" name="" id="">
+        <button></button>
+    </div>
+-->
+<!--
+    kullanım: ul>li{sıra$}*5
+    çıktı: 
+    <ul>
+        <li>sıra1</li>
+        <li>sıra2</li>
+        <li>sıra3</li>
+        <li>sıra4</li>
+        <li>sıra5</li>
+    </ul>
+-->
+
+   <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>ad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>murat</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>deniz</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>hakan</td>
+            </tr>
+            
+        </tbody>
+   </table>
+
+    
+
+</body>
+</html>

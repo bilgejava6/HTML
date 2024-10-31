@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            /** tablonun satırlarının bir birlerine bitiştirmek 
+            yada ayırmak için kullanırız.
+            separate: ayıtmak için
+            collapse: birleştirmek için 
+            */
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid brown;
+        }
+        td{
+            padding: 3px;
+        }
+        th{
+            padding: 5px;
+            background-color: coral;
+        }
+        tr:nth-child(even){
+            background-color: lightgray;
+        }
+        tr:hover{
+            background-color: rgb(65, 106, 229);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>ad</th>
+                <th>telefon</th>
+                <th>email</th>
+                <th>yaş</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Muhammet</td>
+                <td>0 555 999 8877</td>
+                <td>muhammet@gmail.com</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Demet</td>
+                <td>0 421 001 0022</td>
+                <td>demet@gmail.com</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Elif</td>
+                <td>0 312 312 3333</td>
+                <td>elif@gmail.com</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Kenan</td>
+                <td>0 452 554 6874</td>
+                <td>kenan@gmail.com</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Leyla</td>
+                <td>0 985 774 1144</td>
+                <td>leyla@gmail.com</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Zeynep</td>
+                <td>0 555 999 8877</td>
+                <td>zeynep@gmail.com</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>007</td>
+                <td>Şakir</td>
+                <td>0 555 999 8877</td>
+                <td>sakir@gmail.com</td>
+                <td>54</td>
+            </tr>
+            <tr>
+                <td>008</td>
+                <td>Türkan</td>
+                <td>0 555 999 8877</td>
+                <td>turkan@gmail.com</td>
+                <td>43</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>

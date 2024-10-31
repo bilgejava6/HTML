@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /**
+        margin: bir element in dış çeperlerinden olan uzaklık
+        larına verilen addır. [left,right,top,bottom]
+        border: bir bileşenin dört çevresinde bulunan 
+        kenarları birleştiren kenarlığı ifade eder, ayrı ayrı
+        manipüle edilebilir.
+        padding: bir bileşenin kendi içerisindeki bileşenlerine
+        olan iç uzaklığını ifade eder.
+        ÖNEMLİ!!! padding ilgili bilşenin hacminin armasına
+        neden olur. bu nedenle sayfa yapısının oranını bozabilir.
+        kullanırken hesaba katılması gereklidir.
+        */
+        div{
+            border: 1px solid red ;
+            padding: 5px;
+            margin: 5px;
+        }
+        button{
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .kutu{
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .bilgi-formu{
+            padding: 5px;
+            width: 65%;
+        }
+        .makale-box{
+            border: 2px dotted green;
+            width: 50%;
+            height: 300px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <input class="bilgi-formu" type="text" name="ad" id="ad">
+    </div>
+    <div class="div2"> 
+        <label>Muhammet HOCA ile ReactJS</label>
+    </div>
+    <div class="div3">
+        <label>Konu ve içeriklerin tam listesi</label>
+    </div>
+    <div class="makale-box">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aut. Impedit voluptatibus obcaecati optio earum laboriosam, unde ipsam sed temporibus dolorem! Neque natus ullam accusantium perspiciatis delectus minima, id aut.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam officiis fugit fugiat velit sequi voluptatem possimus ratione vel assumenda tempora obcaecati aliquid cum ullam, excepturi quod rerum deserunt. Nihil.
+            Accusamus veritatis atque, iure blanditiis aliquid similique non beatae laborum iusto magni pariatur possimus, quis magnam optio. Libero incidunt, fugit facilis quaerat omnis atque non, iste, dolores possimus veniam illum.
+            Esse sint quidem velit, praesentium cumque dolorem. Ex eos veritatis earum suscipit et consectetur, laboriosam sint, ipsum dolores molestiae ipsa magnam perferendis accusantium velit quis. Odit deserunt tempore quos? Fuga.
+            Voluptatum magnam fugiat quos, distinctio libero nostrum consequuntur error nam explicabo facere aliquam reiciendis? Modi accusantium, quibusdam commodi repellat sint, rem voluptatem eligendi aut laudantium nulla facilis deserunt in! Deserunt.
+            Perspiciatis, quas. Facere error quasi excepturi aut possimus? Aspernatur unde, dolore rerum nobis aperiam ipsum, harum recusandae suscipit facilis modi repellendus cupiditate odio cum alias odit earum labore laudantium dolorem?
+        </p>
+    </div>
+    <div>
+        <button type="button">Buradan çık</button>
+    </div>
+    <br><br>
+    <div class="kutu">
+
+    </div>
+</body>
+</html>
