@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayfa Düzeni</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            height: 96vh;
+            text-align: center;
+        }
+        .header{
+            display: inline-block;
+            border: 1px solid green;
+            margin: 10px;
+            height: 20vh;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .contain{            
+            margin: 2px;
+            height: 71vh;
+            display: flex;
+            flex-direction: row;
+        }
+        .side-menu{
+            border: 1px solid blue;
+            height: 71vh;
+            flex: 3;
+            margin: 2px;
+            border-radius: 10px;
+        }
+        .content-body{
+            border: 1px solid chocolate;
+            height: 71vh;
+            flex: 9;
+            margin: 2px;
+            border-radius: 10px;
+        }
+        li{
+            list-style-type: none;
+            text-align: left;
+            margin: 0px;
+            padding: 2px 5px;
+            font-size: small;
+            margin-bottom: 3px;                   
+        }
+        ul{
+            padding-inline-start: 0px;
+
+        }
+        span{
+            margin-left: 5px; 
+            font-size: smaller;
+            color: #74C0FC;
+        }
+        li:hover{
+            background-color: rgb(245, 243, 241);
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--
+        1- üst alanda header
+        2- sol alanda sideMenu
+        3- orta alanda body
+        4- altta footer
+    -->
+        <div class="container">
+            <div class="header"></div>
+            <div class="contain">
+                <div class="side-menu">
+                    <ul>
+                        <li><i class="fa-solid fa-house" style="color: #74C0FC;"></i><span>Ana Sayfa</span></li>
+                        <li><i class="fa-solid fa-users-line" style="color: #74C0FC;"></i><span>Müşteri Listesi</span></li>
+                        <li><i class="fa-solid fa-rectangle-list" style="color: #74C0FC;"></i><span>Ürün Listesi</span></li>
+                        <li><i class="fa-solid fa-truck" style="color: #74C0FC;"></i><span>Kargo</span></li>
+                        <li><i class="fa-solid fa-users-viewfinder" style="color: #74C0FC;"></i><span>Kullanıcı Listesi</span></li>
+                    </ul>
+                </div>
+                <div class="content-body">
+                    <div class="body"></div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+</body>
+</html>

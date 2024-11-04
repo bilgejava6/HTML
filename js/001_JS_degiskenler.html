@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değişkenler</title>
+</head>
+<body>
+    <h1>JS Değişklenler</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit modi quasi est repellendus. Eius amet est iste odio voluptates saepe ducimus quisquam laudantium suscipit beatae, atque, autem aliquid cupiditate enim.</p>
+    <script>
+        /**
+         * IO
+         * console.log('merhaba');
+         * JavaScript type safe bir dil değildir. yani tip güvenliği
+         * yoktur. Burada kast edilen şey bir değişken belli bir
+         * türde tanımlanmaz.
+         * JAVA int sayi = 5; 
+         * JAVA sayi = "muhammet hoca" diyemezsiniz.
+         * JS var sayi = 5;
+         * JS sayi = 'muhammet hoca' diyebilirsiniz.
+         * JS datatypes
+         * var, let, const
+         */
+        console.log('Merhaba');
+        // int sayi = 4;
+        var sayi = 4;
+        console.log('değişken değeri....: '+ sayi); // ifade ve sayı birleştirilir
+        console.log("değiken değeri.....: "+ sayi); 
+        console.log('değişken değeri....: ', sayi); // ifade ayrı sayı ayrı çıktılanır.
+        
+        var musteri = {
+            ad: 'muhammet',
+            adres: 'ankara'
+        };
+        console.log('müşteri'+ musteri);
+        console.log('musteri', musteri);
+        const adres = 'Ankara';
+        /*
+        NOT!!! bir html sayfası Java uygulaması gibi hata vermez. 
+        hata html sayfasının yüklenmemesi şeklinde tezahür eder.
+        */
+        // adres = 'İzmir';
+        // let ad = prompt('Lütfen adınızı giriniz');
+       // console.log('adınız....: ', ad);
+        /**
+         * ad -> null - null pointer exception
+         * ad -> "" - isEmpty
+         * ad -> " " - isBlank
+         * ad -> "muhammet" 
+         * --- undefined
+         */ 
+        console.log('musteri ad..: ', musteri.ad);
+        console.log('musteri adres..: ', musteri.adres)
+        musteri = '';
+        console.log('musteri ad..: ',
+        musteri.ad !== undefined ? musteri.ad : 'müşteri yok');
+        alert('Dikkat beklenmeyen durum oluştu.');
+    </script>
+</body>
+</html>
