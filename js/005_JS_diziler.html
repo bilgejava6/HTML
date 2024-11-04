@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Diziler</title>
+</head>
+<body>
+    <script>
+        //  'Opel', 'Jaguar','Porshe'
+        let aracMarkalari = ['BMW','Audi','Mercedes', 'Vw']
+        console.log(aracMarkalari);
+        let sonuc = aracMarkalari.push('Opel'); // sona ekleme yapar
+        console.log('push sonucuda dönen değer...: ', sonuc);        
+        console.log(aracMarkalari);
+        sonuc = aracMarkalari.shift();// dizinin başından eleman siler.
+        console.log('shift sonucuda dönen değer...: ', sonuc);        
+        console.log(aracMarkalari);
+        sonuc = aracMarkalari.unshift('Jaguar'); // dizinin başına ekleme yapar.
+        console.log('unshift sonucuda dönen değer...: ', sonuc);        
+        console.log(aracMarkalari); 
+        sonuc = aracMarkalari.pop();// dizinin sonundan eleman siler
+        console.log('pop sonucuda dönen değer...: ', sonuc);        
+        console.log(aracMarkalari); 
+        aracMarkalari.sort();// a..z ye şekilde diziyi sıralar.
+        console.log(aracMarkalari);
+        aracMarkalari.reverse();// diziyi ters çevirir.
+        console.log(aracMarkalari);
+        let eleman = aracMarkalari[2];
+        console.log('2. dizi elemanı....: ', eleman);
+        let findIndex = aracMarkalari.indexOf('Mercedes');
+        console.log('aranan elemanın indexi...: ', findIndex);
+        findIndex = aracMarkalari.indexOf('YOKYOK');
+        console.log('olamayan elemanın indexi...: ', findIndex);
+        aracMarkalari = ['BMW','Audi','Mercedes', 'Vw', 'Volvo'];
+        aracMarkalari1 = ['BMW','Audi','Mercedes', 'Vw', 'Volvo'];
+        aracMarkalari.splice(1,3);// verilen indexten itibaren n adet değer siliyor.
+        aracMarkalari1.splice(2,3);
+        console.log('splice(1,2)...: ', aracMarkalari);
+        console.log('splice(1,3)...: ', aracMarkalari1);
+        
+    </script>
+</body>
+</html>
