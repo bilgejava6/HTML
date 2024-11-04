@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            id: 5,
+            userName: 'muhammed',
+            avatar: 'https://',
+            name: 'Muhammet HOCA'
+        }
+        let loginUser= {
+            code: 200,
+            data: '',
+            message: '',
+            success: false
+        }
+        console.log('login code....: ', loginUser.code);
+        fetch('http://localhost:9090/v1/dev/user/dologin',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userName: 'muhammet',
+                password: 'Aa123456**'
+            })
+        }).then(data=>data.json())
+          .then(ahmetAmca=>console.log(ahmetAmca))
+        
+    </script>
+</body>
+</html>

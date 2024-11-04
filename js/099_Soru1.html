@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         * ürün objesi
+         * id number
+         * ad string
+         * açiklama string 
+         * fiyat number
+         * stok number
+         * kategori object
+         * -- id
+         * -- ad
+         * -- parentid
+         */ 
+        let urun = {
+            id: 5,
+            ad: 'anakart',
+            aciklama: '....',
+            fiyat: 3650,
+            stok: 50,
+            kategori: {
+                id: 1,
+                ad: 'bilgisayar bileşeni',
+                parentid: 0
+            }
+        }
+        console.log(urun.kategori.ad)
+        /**
+         * result,
+         * code: number
+         * size: number
+         * page: number
+         * message: string,
+         * data: jsonArray [] -- ürün listesi
+         * ---- ürün object - 3 adet 
+         * ------- id, ad, url, resmi
+         * 
+        */
+       let urun1 =  {
+                    id: 1,
+                    ad: 'Mouse',
+                    url: '',
+                    resim: ''
+                };
+       let dataList = [
+               urun1,
+                {
+                    id: 2,
+                    ad: 'Klavye',
+                    url: '',
+                    resim: ''
+                },
+                {
+                    id: 3,
+                    ad: 'Saat',
+                    url: '',
+                    resim: ''
+                }
+            ];
+        let result = {
+            code: 200,
+            size: 56,
+            page: 3,
+            message: '',
+            data: dataList
+        }
+
+        console.log(result.data[0].ad)
+
+    </script>
+</body>
+</html>
