@@ -15,7 +15,9 @@
 </head>
 <body>
     <div>
-        <input type="text" id="ad" placeholder="adınız"> <br>        
+        <input onchange="getAd()" type="text" id="ad" placeholder="adınız">
+        <label id="lblad"></label>
+        <br>        
     </div>
     <div>
         <textarea type="text" id="adres" placeholder="adresiniz">
@@ -31,6 +33,10 @@
         const txtAd = document.getElementById('ad');
         const txtAdres = document.getElementById('adres');
         const lblAciklama = document.getElementById('aciklama');
+        const lblAd = document.getElementById('lblad');
+        function getAd(){
+            lblAd.innerText = txtAd.value;
+        }
         function uyeKayit(){
             let metin = 'kayıt başarılı, \n ad: '
             +txtAd.value

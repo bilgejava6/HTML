@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons{
+            margin: 5px;
+            padding: 2px 5px;
+        }
+        #root{
+            height: 90vh;
+            border: 1px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="elementEkle('TEXT')" type="button">input text ekle</button>
+        <button onclick="elementEkle('IMG')" type="button">image ekle</button>
+        <button onclick="elementEkle('BTN')" type="button">button</button>
+       
+    </div>
+    <div id="root"></div>
+    <script>
+        /**
+         * method -> 
+         * aklından sayıtut: public void sayTut(){}
+         * uçgenin alanını hesapla: public void ucgenAlani(int t, int y){}
+         * ucgenAlani(5,989);
+         */ 
+        function elementEkle(neyiEkleyimArkadas){
+            let newElement;
+            switch(neyiEkleyimArkadas){
+                case 'TEXT':
+                    newElement = document.createElement('input');
+                    newElement.setAttribute('type','text');    
+                    newElement.setAttribute('placeholder','lütfen adınızı giriniz..');
+                    newElement.setAttribute('style','display:inline-block; width:90%;color:blue;margin:5px');
+                break;
+                case 'BTN': 
+                    newElement = document.createElement('button');
+                    newElement.innerText = 'Yeni Bir Buton';
+                    newElement.setAttribute('style','padding: 5px; color: red;margin:5px');
+                break;
+                case 'IMG':
+                    newElement = document.createElement('img');    
+                    newElement.setAttribute('src','https://picsum.photos/150/150');
+                    newElement.setAttribute('style','border-radius: 50%; margin:5px');
+                break;
+                default: alert('Geçersiz seçim');break;
+            }
+            const root = document.getElementById('root');
+            root.appendChild(newElement);
+        }
+    </script>
+</body>
+</html>
