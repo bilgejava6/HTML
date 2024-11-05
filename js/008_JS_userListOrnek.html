@@ -80,32 +80,27 @@
             <input type="text" id="textSearch">
             <button class="btn">Ara</button>
         </div>
-        <div class="body">
-            <div class="card col-3">
-                <img class="imgAvatar" src="https://picsum.photos/100/100" alt="">
-                <label class="lblName">Ahmet TAŞ</label>
-                <label class="lblAddress">Ankara - </label>
-                <label class="lblPhone">0 555 999 8877</label>
-            </div>
-            <div class="card col-3">
-                <img class="imgAvatar" src="https://picsum.photos/100/100" alt="">
-                <label class="lblName">Ahmet TAŞ</label>
-                <label class="lblAddress">Ankara - </label>
-                <label class="lblPhone">0 555 999 8877</label>
-            </div>
-            <div class="card col-3">
-                <img class="imgAvatar" src="https://picsum.photos/100/100" alt="">
-                <label class="lblName">Ahmet TAŞ</label>
-                <label class="lblAddress">Ankara - </label>
-                <label class="lblPhone">0 555 999 8877</label>
-            </div>
-            <div class="card col-3">
-                <img class="imgAvatar" src="https://picsum.photos/100/100" alt="">
-                <label class="lblName">Ahmet TAŞ</label>
-                <label class="lblAddress">Ankara - </label>
-                <label class="lblPhone">0 555 999 8877</label>
-            </div> 
+        <div class="body" id="body">           
         </div>
     </div>
+    <script>
+        const bodyDiv = document.getElementById('body');
+        fetch('https://randomuser.me/api/?results=50')
+        .then(data=>data.json())
+        .then(res=>{
+            bodyDiv.innerHTML = '';
+            res.results.forEach(user => {
+                bodyDiv.innerHTML += `
+                <div class="card col-3">
+                    <img class="imgAvatar" src="${user.picture.large}" alt="">
+                    <label class="lblName">${user.name.first+ ' '+ user.name.last}</label>
+                    <label class="lblAddress">${user.location.city}</label>
+                    <label class="lblPhone">${user.phone}</label>
+                </div>
+                `;
+            });
+        })
+
+    </script>
 </body>
 </html>
