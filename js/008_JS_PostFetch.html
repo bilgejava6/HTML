@@ -8,9 +8,9 @@
         .container{
             border: 1px solid red;
             width: 60%;
-            height: 70vh;
+            height: 90vh;
             margin-left: 20%;
-
+            overflow: scroll;
         }
         .post{           
             margin: 5px;
@@ -58,36 +58,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <!-- POST START -->
-        <div class="post">
-            <div class="avatar">
-                <img class="avatar-img" src="https://picsum.photos/100/100" alt="">
-            </div>
-            <div class="body">
-                <div>
-                    <label class="post-title">Başlık kısmı burası</label>
-                </div>
-                <div>
-                     <label class="post-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia aperiam iure error et dolorem. Eligendi error sint illo adipisci, magnam quos beatae, deserunt veniam omnis sapiente ullam, cumque optio?</label>
-                </div>
-                <div class="post-icons">
-                    <div class="p-icon">
-                        <i class="fa-regular fa-comments"></i><span>56</span>
-                    </div>
-                    <div class="p-icon">
-                        <i class="fa-solid fa-retweet"></i>
-                    </div>
-                    <div class="p-icon">
-                        <i class="fa-regular fa-heart"></i><span>544</span>
-                    </div>
-                    <div class="p-icon">
-                        <i class="fa-solid fa-chart-column"></i><span>211</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- POST END -->
+    <div class="container" id="root">
+
     </div>
+
+    <script>
+        const root = document.getElementById('root');
+        fetch('https://dummyjson.com/posts')
+        .then(res => res.json())
+        .then(data=>{        
+            root.innerHTML = '';    
+            data.posts.forEach(post => {
+                console.log(post);
+                root.innerHTML += `
+            <!-- POST START -->
+                    <div class="post">
+                        <div class="avatar">
+                            <img class="avatar-img" src="https://picsum.photos/100/100" alt="">
+                        </div>
+                        <div class="body">
+                            <div>
+                                <label class="post-title">${post.title}</label>
+                            </div>
+                            <div>
+                                <label class="post-body">${post.body}</label>
+                            </div>
+                            <div class="post-icons">
+                                <div class="p-icon">
+                                    <i class="fa-regular fa-comments"></i><span>${post.reactions.likes}</span>
+                                </div>
+                                <div class="p-icon">
+                                    <i class="fa-solid fa-retweet"></i>
+                                </div>
+                                <div class="p-icon">
+                                    <i class="fa-regular fa-heart"></i><span>${post.reactions.dislikes}</span>
+                                </div>
+                                <div class="p-icon">
+                                    <i class="fa-solid fa-chart-column"></i><span>${post.views}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        <!-- POST END -->
+                `;
+            });
+        });
+    </script>
 </body>
 </html>
