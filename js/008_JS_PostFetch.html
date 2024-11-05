@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X</title>
+    <style>
+        .container{
+            border: 1px solid red;
+            width: 60%;
+            height: 70vh;
+            margin-left: 20%;
+
+        }
+        .post{
+            border: 1px solid gray;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+        .avatar{
+            flex: 1;
+        }
+        .body{
+            flex:11;
+            margin-left: 5px;
+            flex-direction: column;
+        }
+        .avatar-img{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+        }
+        .post-title{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .post-body{
+            font-size: 13px;
+        }
+        .post-icons{
+            display: flex;
+            flex-direction: row;
+        }
+        .p-icon{
+            flex: 1;
+            padding: 3px;
+            align-items: center;
+            justify-content: center;
+            border: 1px dotted green;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <div class="avatar">
+                <img class="avatar-img" src="https://picsum.photos/100/100" alt="">
+            </div>
+            <div class="body">
+                <div>
+                    <label class="post-title">Başlık kısmı burası</label>
+                </div>
+                <div>
+                     <label class="post-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia aperiam iure error et dolorem. Eligendi error sint illo adipisci, magnam quos beatae, deserunt veniam omnis sapiente ullam, cumque optio?</label>
+                </div>
+                <div class="post-icons">
+                    <div class="p-icon">
+                        
+                    </div>
+                    <div class="p-icon"></div>
+                    <div class="p-icon"></div>
+                    <div class="p-icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
