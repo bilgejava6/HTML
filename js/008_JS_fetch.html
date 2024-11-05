@@ -6,6 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        /**
+         * GET isteği nasıl gönderilir?
+         * request: fetch('https://randomuser.me/api/?results=5')
+         * response: then([DATA BILGI GELIR])
+         * not gelen text olarak gelir, dönüştürmek ve kullanmak için 
+         * .then(data=> data.json())
+         * gelen datayı kullanmak: 
+         * .then(res=>{ buraya kodlar gelecek})
+         * hata oluşursa: 
+         * .catch(hata=>{hata olursa kodlar})
+         * fetch işleminden sonra yaplacaklar için:
+         * .finally(()=>{yapılacak kodlar.})
+         * 
+         * DİKKAT!!!!!
+         * fetch isteği asenkron bir işlemdir, bu nedeniyle kodun akışını 
+         * bozabilir. buna göre kodlama yapmak gereklidir.
+         */ 
+        let gelenKullaniciSayisi=0;
+        console.log('fetch isteği başladı');        
+        fetch('https://randomuser.me/api/?results=5')
+        .then(neGelmisBirBakayim=> neGelmisBirBakayim.json())
+        .then(res=>{
+           console.log(res.info.results) 
+           gelenKullaniciSayisi = res.info.results;
+           console.log('gelen kullanıcı sayısı....: ', gelenKullaniciSayisi)
+        })
+        .catch(()=> console.log('bir hata ooldu.'))
+        .finally(()=>console.log('her istekten sonra ben çalışırım.'));
+      
+    </script>
 </body>
 </html>
